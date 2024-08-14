@@ -1,4 +1,4 @@
-package com.devteria.profile.entity;
+package com.devteria.profile.dto.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -16,15 +16,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Node("user_profile")
-public class UserProfile {
-    @Id
-    @GeneratedValue(generatorClass = UUIDStringGenerator.class)
-    String id;
-
-    @Property("userId")
-    String userId;
-
+public class UserProfileCreateRequest {
     String firstName;
     String lastName;
     LocalDate dob;
